@@ -57,10 +57,7 @@ struct MemoryGame<CardContent> where CardContent : Equatable {
                     score += 2
                 }
                 else{
-                    if cards[potentialMatchIndex].isSeen == true{
-                        score -= 1
-                    }
-                    if cards[safeChoosenIndex].isSeen == true {
+                    if cards[potentialMatchIndex].isSeen == true || cards[safeChoosenIndex].isSeen == true {
                         score -= 1
                     }
                 }
